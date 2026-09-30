@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crucigrama Bíblico - Rut</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fff7e6, #f5e1c0);
+  color: #3b2415;
+  text-align: center;
+}
+
+header {
+  background: #6b3e26;
+  color: white;
+  padding: 22px 15px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.subtitle {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.instructions {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px #0002;
+}
+
+.game {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 4px 15px #0002;
+  overflow-x: auto;
+}
+
+#crossword {
+  display: grid;
+  margin: 0 auto 20px;
+  gap: 2px;
+  width: max-content;
+}
+
+.cell {
+  width: 42px;
+  height: 42px;
+  background: #111;
+  position: relative;
+}
+
+.cell input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #555;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #3b2415;
+  background: #fffdf8;
+}
+
+.cell input:focus {
+  outline: 3px solid #d39b45;
+  background: #fff4cf;
+}
+
+.number {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #555;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.clues {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  text-align: left;
+}
+
+.clue-box {
+  background: #fff8eb;
+  border-radius: 12px;
+  padding: 15px;
+  border: 2px solid #e4c58d;
+}
+
+.clue-box h2 {
+  margin-top: 0;
+  color: #6b3e26;
+}
+
+.clue {
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#check {
+  background: #6b3e26;
+  color: white;
+}
+
+#clear {
+  background: #d9a441;
+  color: white;
+}
+
+#solution {
+  background: #557a46;
+  color: white;
+}
+
+#message {
+  font-size: 20px;
+ 
